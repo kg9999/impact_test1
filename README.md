@@ -25,8 +25,8 @@ Sequelize ORM was used. Although it should work with 'mysql'|'mariadb'|'sqlite'|
 ```sh
 git clone https://github.com/kg9999/impact_test1.git
 npm install
-change configuration details in configs/config.json
 ```
+change configuration details in configs/config.json
 
 ## Configuration: configs/config.json
 
@@ -73,7 +73,8 @@ public -> contains client
 ## Sould you get Errors:
 
 ```sh
-Please ensure that there is a connection to the database and that the db exists. The application does not terminate if no connection to db can be established.
-Please do not refresh client page as there might be a conflict between api routes and public routes
+Please ensure that there is a connection to the database and that the db exists. 
+The application does not terminate if no connection to db can be established.
+Please do not refresh client page as there might be a conflict between api routes and Client public routes
 ```
 
