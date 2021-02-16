@@ -13,8 +13,8 @@ const configs = require('./configs/config');
 const port = configs.server.port;
 const app = express();
 
-app.use(helmet());
-app.use(compression());
+//app.use(helmet());
+//app.use(compression());
 
 swaggerDocument.host = `localhost:${port}`;
 // definition of api with swagger
