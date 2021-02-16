@@ -4,7 +4,7 @@
         "host": "127.0.0.1",
         "port": 8000,
         "user": "root",
-        "pass": "kgopelo99",
+        "pass": "root",
         "database": "impact_test_seq",
         "pool_max": 10,
         "pool_min": 0,
