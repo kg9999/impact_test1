@@ -62,7 +62,7 @@ npm start or node app.js
 ## Project Structure
 ```sh
 routes -> contains all routes of api
-controllers -> contains all routes of api
+controllers -> contains logic of routes
 models -> contains models of api
 modules -> contains all modules of api
 configs -> contains all configs of api
