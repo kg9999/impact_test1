@@ -4,7 +4,18 @@
 
 This project is an rest api and a mini client for managing books, authors, categories and users.
 
-![](header.png)
+## ERD Diagram
+
+![ERD screenshot](erd.png?raw=true "Command API Results")
+
+
+## Swagger API Definition
+
+```sh
+    http://localhost:8080/api-docs/
+```
+![Swagger screenshot](swagger.png?raw=true "Command API Results")
+
 
 ## Installation
 
@@ -45,14 +56,5 @@ Configuration: configs/config.json
 Run
 ```sh
 npm start or node app.js
-```
-
-## Development setup
-
-Describe how to install all development dependencies and how to run an automated test-suite of some kind. Potentially do this for multiple platforms.
-
-```sh
-make install
-npm test
 ```
 
