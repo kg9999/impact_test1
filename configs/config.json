@@ -1,0 +1,21 @@
+{
+    "db": {
+        "dialect": "mysql",
+        "host": "127.0.0.1",
+        "port": 8000,
+        "user": "root",
+        "pass": "kgopelo99",
+        "database": "impact_test_seq",
+        "pool_max": 10,
+        "pool_min": 0,
+        "pool_acquire": 30000,
+        "pool_idle": 10000
+    },
+    "auth": {
+        "web_token_expire": "30d",
+        "web_token_secret_key": "MyImpactSecretKey"
+    },
+    "server": {
+        "port": 8080
+    }
+}

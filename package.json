@@ -1,0 +1,32 @@
+{
+  "name": "impact-server",
+  "version": "1.0.0",
+  "description": "impact test 1",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kgopelo makgamatha",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^3.0.0",
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "helmet": "^4.4.1",
+    "install": "^0.13.0",
+    "jsonwebtoken": "^8.5.1",
+    "mysql2": "^2.2.5",
+    "npm": "^7.5.4",
+    "pg": "^8.5.1",
+    "pg-hstore": "^2.3.3",
+    "sequelize": "^6.5.0",
+    "swagger-jsdoc": "^6.0.5",
+    "swagger-ui-express": "^4.1.6",
+    "winston": "^3.3.3"
+  }
+}

@@ -1,0 +1,530 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "Imapct Node Test 1",
+        "description": "Impace REST API",
+        "license": {
+            "name": "Imapct",
+            "url": "https://opensource.org/licenses/MIT"
+        },
+        "contact": {
+            "name": "kgopelo makgamatha",
+            "url": "https://impact.com",
+            "email": "kgopelo@impact.com"
+        }
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "tags": [
+        {
+            "name": "Impact",
+            "description": "Impact Node Test 1"
+        }
+    ],
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/api/user/signup": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "description": "Signup New new user in system",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "New User that we want to create",
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "New user is created",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/user/signin": {
+            "post": {
+                "tags": [
+                    "user"
+                ],
+                "description": "Existing User Signin",
+                "parameters": [
+                    {
+                        "name": "user",
+                        "in": "body",
+                        "description": "User that wants to signin",
+                        "schema": {
+                            "$ref": "#/definitions/signinuser"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User signed in.",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/category": {
+            "post": {
+                "tags": [
+                    "category"
+                ],
+                "description": "Add categories",
+                "parameters": [
+                    {
+                        "name": "category",
+                        "in": "body",
+                        "description": "Add category",
+                        "schema": {
+                            "$ref": "#/definitions/category"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Category Added.",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/category{id}": {
+            "delete": {
+                "tags": [
+                    "category"
+                ],
+                "description": "Delete Category with given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Id of category that we want to delete",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Delete category with id",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update category with give ID",
+                "tags": [
+                    "category"
+                ],
+                "parameters": [
+                    {
+                        "name": "category",
+                        "in": "body",
+                        "description": "category with new values of properties",
+                        "schema": {
+                            "$ref": "#/definitions/category"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "category is updated",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "category"
+                ],
+                "description": "Get Category with given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of category that we want to find",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get category with id",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/author": {
+            "post": {
+                "tags": [
+                    "author"
+                ],
+                "description": "Add author",
+                "parameters": [
+                    {
+                        "name": "author",
+                        "in": "body",
+                        "description": "Add author",
+                        "schema": {
+                            "$ref": "#/definitions/author"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "author Added.",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/author{id}": {
+            "delete": {
+                "tags": [
+                    "author"
+                ],
+                "description": "Delete author with given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Id of author that we want to delete",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Delete author with id",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update author with give ID",
+                "tags": [
+                    "author"
+                ],
+                "parameters": [
+                    {
+                        "name": "author",
+                        "in": "body",
+                        "description": "author with new values of properties",
+                        "schema": {
+                            "$ref": "#/definitions/author"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "author is updated",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "author"
+                ],
+                "description": "Get author with given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of author that we want to find",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get author with id",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/book": {
+            "post": {
+                "tags": [
+                    "book"
+                ],
+                "description": "Add book",
+                "parameters": [
+                    {
+                        "name": "book",
+                        "in": "body",
+                        "description": "Categories and authors are an array with their respective ids from db",
+                        "schema": {
+                            "$ref": "#/definitions/book"
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "book Added.",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/book{id}": {
+            "delete": {
+                "tags": [
+                    "book"
+                ],
+                "description": "Delete book with given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "Id of book that we want to delete",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Delete book with id",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            },
+            "put": {
+                "summary": "Update book with give ID",
+                "tags": [
+                    "book"
+                ],
+                "parameters": [
+                    {
+                        "name": "book",
+                        "in": "body",
+                        "description": "book with new values of properties",
+                        "schema": {
+                            "$ref": "#/definitions/book"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "book is updated",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            },
+            "get": {
+                "tags": [
+                    "book"
+                ],
+                "description": "Get book with given id",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "description": "ID of book that we want to find",
+                        "type": "integer"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Get book with id",
+                        "schema": {
+                            "$ref": "#/definitions/response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "book": {
+            "required": [
+                "name",
+                "isbn_number",
+                "year_published",
+                "authors",
+                "categories"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "isbn_number": {
+                    "type": "string"
+                },
+                "year_published": {
+                    "type": "date"
+                },
+                "authors": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                },
+                "categories": {
+                    "type": "array",
+                    "items": {
+                        "type": "number"
+                    }
+                }
+            }
+        },
+        "category": {
+            "required": [
+                "name",
+                "description"
+            ],
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                }
+            }
+        },
+        "author": {
+            "required": [
+                "first_name",
+                "last_name"
+            ],
+            "properties": {
+                "first_name": {
+                    "type": "string"
+                },
+                "last_name": {
+                    "type": "string"
+                }
+            }
+        },
+        "signinuser": {
+            "required": [
+                "username",
+                "password"
+            ],
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "response": {
+            "required": [
+                "success",
+                "message",
+                "data"
+            ],
+            "properties": {
+                "success": {
+                    "type": "number"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "data": {
+                    "type": "object"
+                }
+            }
+        },
+        "User": {
+            "required": [
+                "username",
+                "email",
+                "full_name",
+                "password"
+            ],
+            "properties": {
+                "username": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+                "email": {
+                    "type": "string",
+                    "uniqueItems": true
+                },
+                "full_name": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
