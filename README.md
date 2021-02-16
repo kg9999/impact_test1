@@ -6,6 +6,8 @@ This project is an rest api and a mini client for managing books, authors, categ
 
 ## ERD Diagram
 
+Sequelize ORM was used. Although it should work with 'mysql'|'mariadb'|'sqlite'|'postgres'|'mssql', it was only tested with MYSQL
+
 ![ERD screenshot](erd.png?raw=true "Command API Results")
 
 
