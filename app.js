@@ -24,6 +24,7 @@ app.use(
   swaggerUi.setup(swaggerDocument, { explorer: true })
 );
 
+app.use(express.static('public'))
 
 
 const db = require("./models");
