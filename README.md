@@ -72,5 +72,6 @@ public -> contains client
 
 ```sh
 Please ensure that there is a connection to the database and that the db exists. The application does not terminate if no connection to db can be established.
+Please do not refresh client page as there might be a conflict between api routes and public routes
 ```
 
